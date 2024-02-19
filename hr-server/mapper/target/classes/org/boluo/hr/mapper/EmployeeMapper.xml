@@ -133,10 +133,10 @@
     </delete>
     <select id="selectEnhanceEmployeeByEmployeeId" resultMap="enhanceEmployee">
         select emp.*,
-               n.name          as nname,
-               n.id            as nid,
-               poli.name       as poname,
-               poli.id         as poliid,
+<!--               n.name          as nname,-->
+<!--               n.id            as nid,-->
+<!--               poli.name       as poname,-->
+<!--               poli.id         as poliid,-->
                dep.`name`      as depname,
                dep.id          as depid,
                job.name        as jobname,
@@ -145,24 +145,25 @@
                posi.name       as posiname,
                posi.id         as posiid
         from employee emp,
-             nation n,
-             politics_status poli,
+<!--             nation n,-->
+<!--             politics_status poli,-->
              department dep,
              job_level job,
              position posi
-        where emp.nation_id = n.id
-          and emp.politic_id = poli.id
-          and emp.department_id = dep.id
+        where
+<!--        emp.nation_id = n.id-->
+<!--        and emp.politic_id = poli.id-->
+          emp.department_id = dep.id
           and emp.job_level_id = job.id
           and emp.pos_id = posi.id
           and emp.id = #{id}
     </select>
     <select id="selectByEmpName" resultMap="enhanceEmployee">
         select emp.*,
-               n.name          as nname,
-               n.id            as nid,
-               poli.name       as poname,
-               poli.id         as poliid,
+<!--               n.name          as nname,-->
+<!--               n.id            as nid,-->
+<!--               poli.name       as poname,-->
+<!--               poli.id         as poliid,-->
                dep.`name`      as depname,
                dep.id          as depid,
                job.name        as jobname,
@@ -171,24 +172,25 @@
                posi.name       as posiname,
                posi.id         as posiid
         from employee emp,
-             nation n,
-             politics_status poli,
+<!--             nation n,-->
+<!--             politics_status poli,-->
              department dep,
              job_level job,
              position posi
-        where emp.nation_id = n.id
-          and emp.politic_id = poli.id
-          and emp.department_id = dep.id
+        where
+<!--          emp.nation_id = n.id-->
+<!--          and emp.politic_id = poli.id-->
+          emp.department_id = dep.id
           and emp.job_level_id = job.id
           and emp.pos_id = posi.id
           and emp.name like concat('%', #{empName}, '%')
     </select>
     <select id="selectAll" resultMap="enhanceEmployee">
         select emp.*,
-               n.name          as nname,
-               n.id            as nid,
-               poli.name       as poname,
-               poli.id         as poliid,
+<!--               n.name          as nname,-->
+<!--               n.id            as nid,-->
+<!--               poli.name       as poname,-->
+<!--               poli.id         as poliid,-->
                dep.`name`      as depname,
                dep.id          as depid,
                job.name        as jobname,
@@ -197,14 +199,15 @@
                posi.name       as posiname,
                posi.id         as posiid
         from employee emp,
-             nation n,
-             politics_status poli,
+<!--             nation n,-->
+<!--             politics_status poli,-->
              department dep,
              job_level job,
              position posi
-        where emp.nation_id = n.id
-          and emp.politic_id = poli.id
-          and emp.department_id = dep.id
+        where
+<!--          emp.nation_id = n.id-->
+<!--          and emp.politic_id = poli.id-->
+          emp.department_id = dep.id
           and emp.job_level_id = job.id
           and emp.pos_id = posi.id
     </select>
@@ -439,15 +442,15 @@
             <if test="wedlock != null">
                 wedlock = #{wedlock,jdbcType=CHAR},
             </if>
-            <if test="nationId != null">
-                nation_id = #{nationId,jdbcType=INTEGER},
-            </if>
-            <if test="nativePlace != null">
-                native_place = #{nativePlace,jdbcType=VARCHAR},
-            </if>
-            <if test="politicId != null">
-                politic_id = #{politicId,jdbcType=INTEGER},
-            </if>
+<!--            <if test="nationId != null">-->
+<!--                nation_id = #{nationId,jdbcType=INTEGER},-->
+<!--            </if>-->
+<!--            <if test="nativePlace != null">-->
+<!--                native_place = #{nativePlace,jdbcType=VARCHAR},-->
+<!--            </if>-->
+<!--            <if test="politicId != null">-->
+<!--                politic_id = #{politicId,jdbcType=INTEGER},-->
+<!--            </if>-->
             <if test="email != null">
                 email = #{email,jdbcType=VARCHAR},
             </if>
@@ -499,9 +502,9 @@
             <if test="endContract != null">
                 end_contract = #{endContract,jdbcType=DATE},
             </if>
-            <if test="workAge != null">
-                work_age = #{workAge,jdbcType=INTEGER},
-            </if>
+<!--            <if test="workAge != null">-->
+<!--                work_age = #{workAge,jdbcType=INTEGER},-->
+<!--            </if>-->
             <if test="workId!= null">
                 work_id = #{workId,jdbcType=CHAR}
             </if>
