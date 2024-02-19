@@ -1,6 +1,8 @@
 package org.boluo.hr.pojo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.Length;
 
@@ -15,6 +17,8 @@ import java.util.Date;
  */
 @Accessors(chain = true)
 @Data
+@Getter
+@Setter
 public class InsertEmployee {
     /**
      * 主键
@@ -34,50 +38,50 @@ public class InsertEmployee {
     /**
      * 生日
      */
-    @NotNull(message = "生日不能为空")
+//    @NotNull(message = "生日不能为空")
     private Date birthday;
     /**
      * 身份证号
      */
-    @NotNull(message = "身份证号不能为空")
-    @Length(min = 18, max = 18, message = "身份证号长度必须为18位")
+//    @NotNull(message = "身份证号不能为空")
+//    @Length(min = 18, max = 18, message = "身份证号长度必须为18位")
     private String idCard;
     /**
      * 婚姻状态
      */
-    @NotNull(message = "婚姻状态不能为空")
+//    @NotNull(message = "婚姻状态不能为空")
     @Pattern(regexp = "未婚|已婚", message = "婚姻状态只能是未婚|已婚")
     private String wedlock;
     /**
      * 民族id
      */
-    @NotNull(message = "民族id不能为空")
+//    @NotNull(message = "民族id不能为空")
     private Integer nationId;
     /**
      * 籍贯
      */
-    @NotNull(message = "籍贯不能为空")
+//    @NotNull(message = "籍贯不能为空")
     private String nativePlace;
     /**
      * 政治面貌
      */
-    @NotNull(message = "政治面貌不能为空")
+//    @NotNull(message = "政治面貌不能为空")
     private Integer politicId;
     /**
      * 邮箱
      */
-    @NotNull(message = "邮箱不能为空")
-    @Email(message = "邮箱格式不正确")
+//    @NotNull(message = "邮箱不能为空")
+//    @Email(message = "邮箱格式不正确")
     private String email;
     /**
      * 手机号
      */
-    @NotNull(message = "手机号不能为空")
+//    @NotNull(message = "手机号不能为空")
     private String phone;
     /**
      * 地址
      */
-    @NotNull(message = "地址不能为空")
+//    @NotNull(message = "地址不能为空")
     private String address;
     /**
      * 部门id
@@ -97,32 +101,32 @@ public class InsertEmployee {
     /**
      * 聘用形式
      */
-    @NotNull(message = "聘用形式不能为空")
+//    @NotNull(message = "聘用形式不能为空")
     private String engageForm;
     /**
      * 最高学历
      */
-    @NotNull(message = "最高学历不能为空")
+//    @NotNull(message = "最高学历不能为空")
     private String tiptopDegree;
     /**
      * 所属专业
      */
-    @NotNull(message = "所属专业不能为空")
+//    @NotNull(message = "所属专业不能为空")
     private String specialty;
     /**
      * 学校
      */
-    @NotNull(message = "学校不能为空")
+//    @NotNull(message = "学校不能为空")
     private String school;
     /**
      * 入职日期
      */
-    @NotNull(message = "入职日期不能为空")
+//    @NotNull(message = "入职日期不能为空")
     private Date beginDate;
     /**
      * 在职状态
      */
-    @NotNull(message = "在职状态不能为空")
+//    @NotNull(message = "在职状态不能为空")
     private String workState;
     /**
      * 工号
@@ -131,31 +135,31 @@ public class InsertEmployee {
     /**
      * 合同期限
      */
-    @NotNull(message = "合同期限不能为空")
+//    @NotNull(message = "合同期限不能为空")
     private Double contractTerm;
     /**
      * 转正日期
      */
-    @NotNull(message = "转正日期不能为空")
+//    @NotNull(message = "转正日期不能为空")
     private Date conversionTime;
     /**
      * 离职日期
      */
-    @NotNull(message = "离职日期不能为空")
+//    @NotNull(message = "离职日期不能为空")
     private Date notWorkDate;
     /**
      * 合同起始日期
      */
-    @NotNull(message = "合同起始日期不能为空")
+//    @NotNull(message = "合同起始日期不能为空")
     private Date beginContract;
     /**
      * 合同结束日期
      */
-    @NotNull(message = "合同结束日期不能为空")
+//    @NotNull(message = "合同结束日期不能为空")
     private Date endContract;
     /**
      * 工龄
      */
-    @NotNull(message = "工龄不能为空")
+//    @NotNull(message = "工龄不能为空")
     private Integer workAge;
 }

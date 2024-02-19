@@ -1,6 +1,8 @@
 package org.boluo.hr.pojo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.Email;
@@ -15,6 +17,8 @@ import java.util.Date;
  */
 @Accessors(chain = true)
 @Data
+@Getter
+@Setter
 public class UploadEmployee {
     /**
      * 主键
@@ -34,7 +38,7 @@ public class UploadEmployee {
     /**
      * 生日
      */
-    @NotNull(message = "生日不能为空")
+//    @NotNull(message = "生日不能为空")
     private Date birthday;
     /**
      * 身份证号
@@ -44,28 +48,28 @@ public class UploadEmployee {
     /**
      * 婚姻状态
      */
-    @NotNull(message = "婚姻状态不能为空")
+//    @NotNull(message = "婚姻状态不能为空")
     private String wedlock;
     /**
      * 民族id
      */
-    @NotNull(message = "民族id不能为空")
+//    @NotNull(message = "民族id不能为空")
     private Integer nationId;
     /**
      * 籍贯
      */
-    @NotNull(message = "籍贯不能为空")
+//    @NotNull(message = "籍贯不能为空")
     private String nativePlace;
     /**
      * 政治面貌
      */
-    @NotNull(message = "政治面貌不能为空")
+//    @NotNull(message = "政治面貌不能为空")
     private Integer politicId;
     /**
      * 邮箱
      */
-    @NotNull(message = "邮箱不能为空")
-    @Email(message = "邮箱格式不正确")
+//    @NotNull(message = "邮箱不能为空")
+//    @Email(message = "邮箱格式不正确")
     private String email;
     /**
      * 手机号
@@ -75,7 +79,7 @@ public class UploadEmployee {
     /**
      * 地址
      */
-    @NotNull(message = "地址不能为空")
+//    @NotNull(message = "地址不能为空")
     private String address;
     /**
      * 部门id
@@ -100,12 +104,12 @@ public class UploadEmployee {
     /**
      * 最高学历
      */
-    @NotNull(message = "最高学历不能为空")
+//    @NotNull(message = "最高学历不能为空")
     private String tiptopDegree;
     /**
      * 所属专业
      */
-    @NotNull(message = "所属专业不能为空")
+//    @NotNull(message = "所属专业不能为空")
     private String specialty;
     /**
      * 学校
@@ -120,7 +124,7 @@ public class UploadEmployee {
     /**
      * 在职状态
      */
-    @NotNull(message = "在职状态不能为空")
+//    @NotNull(message = "在职状态不能为空")
     private String workState;
     /**
      * 工号
@@ -129,7 +133,7 @@ public class UploadEmployee {
     /**
      * 合同期限
      */
-    @NotNull(message = "合同期限不能为空")
+//    @NotNull(message = "合同期限不能为空")
     private Double contractTerm;
     /**
      * 转正日期
@@ -139,7 +143,7 @@ public class UploadEmployee {
     /**
      * 离职日期
      */
-    @NotNull(message = "离职日期不能为空")
+//    @NotNull(message = "离职日期不能为空")
     private Date notWorkDate;
     /**
      * 合同起始日期
@@ -154,6 +158,6 @@ public class UploadEmployee {
     /**
      * 工龄
      */
-    @NotNull(message = "工龄不能为空")
+//    @NotNull(message = "工龄不能为空")
     private Integer workAge;
 }

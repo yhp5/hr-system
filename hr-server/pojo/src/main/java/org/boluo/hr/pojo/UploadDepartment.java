@@ -29,7 +29,7 @@ public class UploadDepartment {
     /**
      * 部门路径
      */
-    @NotNull(message = "部门路径不能为空")
+//    @NotNull(message = "部门路径不能为空")
     private String depPath;
     /**
      * 是否开启
