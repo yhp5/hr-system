@@ -5,7 +5,7 @@
       <el-breadcrumb-item>高级资料</el-breadcrumb-item>
     </el-breadcrumb>
     <el-tabs type='border-card' @tab-click='tabChange'>
-      <el-tab-pane>
+      <!-- <el-tab-pane>
         <span slot='label'><i class='el-icon-bank-card'></i> 奖惩资料</span>
         <el-table :data='employeeAdv' style='width: 100%'>
           <el-table-column label='#' type='index' width='50'>
@@ -203,8 +203,7 @@
         </el-table>
       </el-tab-pane>
       <el-tab-pane>
-        <span slot='label'><i class='el-icon-shopping-bag-1
-'></i>
+        <span slot='label'><i class='el-icon-shopping-bag-1'></i>
           考评资料</span>
         <el-table :data='employeeAppraise' style='width: 100%'>
           <el-table-column label='#' type='index' width='50'>
@@ -502,7 +501,7 @@
           <el-table-column prop='remark' label='备注' width='120'>
           </el-table-column>
         </el-table>
-      </el-tab-pane>
+      </el-tab-pane> -->
       <el-tab-pane>
         <span slot='label'><i class='el-icon-chat-dot-round'></i> 工资信息</span>
         <el-table :data='empSalaryInfo' stripe>

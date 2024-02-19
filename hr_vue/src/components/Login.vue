@@ -3,7 +3,7 @@
     <img :src='bg' alt='' class='wave' />
     <div class='container'>
       <div class='img'>
-        <img :src='img_3' alt='' />
+        <!-- <img :src='img_3' alt='' /> -->
       </div>
       <div class='login-box'>
         <div class='form'>
@@ -50,7 +50,7 @@
 
 <script>
 // 导入login页面需要的图片
-import bg from '../assets/img/bg.png'
+import bg from '../assets/img/bbg.png'
 import avatar from '../assets/img/avatar.svg'
 import img_3 from '../assets/img/img-3.svg'
 
@@ -132,9 +132,10 @@ body {
 
 .wave {
   position: fixed;
-  height: 100%;
+  height: 50%;
+  width: 50%;
   left: 0;
-  bottom: 0;
+  top: 20%;
   z-index: -1;
 }
 
@@ -229,7 +230,7 @@ body {
 .input-group > div > h5 {
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: -5px;
   transform: translateY(-50%);
   color: #d9d9d9;
   font-size: 18px;

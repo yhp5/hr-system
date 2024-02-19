@@ -22,16 +22,15 @@
             icon='el-icon-search'
           >搜索</el-button
           >
-          <el-button
+          <!-- <el-button
             type='primary'
             size='small '
             @click='tipSearch'
             icon='el-icon-cpu'
-          >高级搜索</el-button
-          >
+          >高级搜索</el-button> -->
         </span>
         <span class='rightBtn'>
-          <el-upload
+          <!-- <el-upload
             action='/basic/emp/import'
             :before-upload='beforeUpload'
             :show-file-list='false'
@@ -53,13 +52,13 @@
             @click='exportExcel'
             icon='el-icon-download'
           >下载数据</el-button
-          >
+          > -->
           <el-button
             type='info'
             size='small '
             @click='showAddDia'
             icon='el-icon-circle-plus'
-          >添加用户</el-button
+          >添加员工</el-button
           >
         </span>
       </div>
@@ -205,18 +204,18 @@
         </el-table-column>
         <el-table-column prop='idCard' label='身份证号码' width='180'></el-table-column>
         <el-table-column prop='wedlock' label='婚姻状态' width='60'></el-table-column>
-        <el-table-column label='名族' width='90'>
+        <!-- <el-table-column label='民族' width='90'>
           <template slot-scope='scope'>
             {{ scope.row.nation.name }}
           </template>
-        </el-table-column>
-        <el-table-column prop='nativePlace' label='籍贯' width='100'>
-        </el-table-column>
-        <el-table-column label='政治面貌' width='110'>
+        </el-table-column> -->
+        <!-- <el-table-column prop='nativePlace' label='籍贯' width='100'>
+        </el-table-column> -->
+        <!-- <el-table-column label='政治面貌' width='110'>
           <template slot-scope='scope'>
             {{ scope.row.politicsStatus.name }}
           </template>
-        </el-table-column>
+        </el-table-column> -->
         <el-table-column prop='email' label='电子邮件' width='170'>
         </el-table-column>
         <el-table-column prop='phone' label='手机号码' width='120'>
@@ -226,8 +225,8 @@
             {{ scope.row.department.name }}
           </template>
         </el-table-column>
-        <el-table-column prop='address' label='联系地址' width='250'>
-        </el-table-column>
+        <!-- <el-table-column prop='address' label='联系地址' width='250'>
+        </el-table-column> -->
         <el-table-column label='职位' width='120'>
           <template slot-scope='scope'>
             {{ scope.row.position.name }}
@@ -330,7 +329,7 @@
               </el-date-picker>
             </el-form-item>
           </el-col>
-          <el-col :span='6'>
+          <!-- <el-col :span='6'>
             <el-form-item prop='politicId' label='政治面貌:'>
               <el-select v-model='employeeFrom.politicId' placeholder='请选择'>
                 <el-option
@@ -342,7 +341,7 @@
                 </el-option>
               </el-select>
             </el-form-item>
-          </el-col>
+          </el-col> -->
         </el-row>
         <el-row :gutter='20'>
           <el-col :span='6'>
@@ -358,15 +357,15 @@
               </el-select>
             </el-form-item>
           </el-col>
-          <el-col :span='6'>
+          <!-- <el-col :span='6'>
             <el-form-item prop='nativePlace' label='籍贯:'>
               <el-input v-model='employeeFrom.nativePlace'></el-input>
             </el-form-item>
-          </el-col>
+          </el-col> -->
           <el-col :span='6'>
             <el-form-item prop='email' label='邮箱:'>
               <el-input placeholder='请输入内容' v-model='employeeFrom.email'>
-                <template slot='append'>qq.com</template>
+                <!-- <template slot='append'>qq.com</template> -->
               </el-input>
             </el-form-item
             >
@@ -380,13 +379,13 @@
           </el-col>
         </el-row>
         <el-row :gutter='20'>
-          <el-col :span='6'>
+          <!-- <el-col :span='6'>
             <el-form-item prop='address' label='住址:'>
               <el-input placeholder='请输入内容' v-model='employeeFrom.address'>
               </el-input
               >
             </el-form-item>
-          </el-col>
+          </el-col> -->
           <el-col :span='6'>
             <el-form-item prop='departmentId' label='所属部门:'>
               <el-select v-model='employeeFrom.departmentId' placeholder='请选择'>
@@ -607,7 +606,7 @@ export default {
         ],
         phone: [
           { required: true, message: '请输入相关参数', trigger: 'blur' },
-          { min: 11, max: 11, message: '长度为 11 个字符', trigger: 'blur' }
+          { trigger: 'blur' }
         ],
         address: [
           { required: true, message: '请输入相关参数', trigger: 'blur' }
@@ -651,7 +650,7 @@ export default {
       },
       // 添加还是编辑
       isEditOrAdd: 'edit',
-      titleIsEOrA: '添加用户',
+      titleIsEOrA: '添加员工',
       loading: true,
       // 上传文件小icon
       uploadIcon: 'el-icon-upload',
@@ -890,7 +889,7 @@ export default {
     },
     isEditOrAdd(val) {
       if (val === 'add') {
-        this.titleIsEOrA = '添加用户'
+        this.titleIsEOrA = '添加员工'
       } else {
         this.titleIsEOrA = '修改用户'
       }

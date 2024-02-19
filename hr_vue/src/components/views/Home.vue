@@ -9,7 +9,7 @@
             <use xlink:href='#icon-boluo3'></use>
           </svg>
           <span style='font-size: 30px; font-family: 华文新魏,serif;'
-          ><b>Yo人事管理</b></span
+          ><b>医院人才智能管理系统</b></span
           >
         </span>
 
