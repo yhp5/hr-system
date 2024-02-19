@@ -72,6 +72,7 @@ public class EmployeeService {
             return false;
         }
         // 修改workId
+
         UploadEmployee uploadEmployee = new UploadEmployee();
         uploadEmployee.setId(insertEmployee.getId());
         uploadEmployee.setWorkId(String.format("%08d", insertEmployee.getId()));
@@ -84,15 +85,15 @@ public class EmployeeService {
             throw new BusinessException("查询员工数据失败");
         }
 
-        ConsumeLog consumeLog = new ConsumeLog();
-        consumeLog.setUuid(UUID.randomUUID().toString());
-        // 先添加消费记录
-        if (!consumeLogService.insert(consumeLog)) {
-            throw new BusinessException("添加消费记录失败");
-        }
-        rabbitTemplate.convertAndSend(MailConstants.MAIL_EXCHANGE_NAME,
-                MailConstants.MAIL_ROUTING_KEY_NAME, enhanceEmployee,
-                new CorrelationData(consumeLog.getUuid()));
+//        ConsumeLog consumeLog = new ConsumeLog();
+//        consumeLog.setUuid(UUID.randomUUID().toString());
+//        // 先添加消费记录
+//        if (!consumeLogService.insert(consumeLog)) {
+//            throw new BusinessException("添加消费记录失败");
+//        }
+//        rabbitTemplate.convertAndSend(MailConstants.MAIL_EXCHANGE_NAME,
+//                MailConstants.MAIL_ROUTING_KEY_NAME, enhanceEmployee,
+//                new CorrelationData(consumeLog.getUuid()));
         return true;
     }
 
