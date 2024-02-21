@@ -560,10 +560,10 @@
           </el-table-column>
         </el-table>
       </el-tab-pane>
-      <el-tab-pane>
+      <!-- <el-tab-pane>
         <span slot='label'><i class='el-icon-guide'></i> 其他信息</span>
         其他信息
-      </el-tab-pane>
+      </el-tab-pane> -->
       <el-pagination
         @size-change='handleSizeChange'
         class='el_page_div'

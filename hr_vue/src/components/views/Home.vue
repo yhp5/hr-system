@@ -4,12 +4,12 @@
       <!-- 头部 -->
       <el-header>
         <span>
-          ©
+          <!-- ©
           <svg class='icon' aria-hidden='true'>
             <use xlink:href='#icon-boluo3'></use>
-          </svg>
+          </svg> -->
           <span style='font-size: 30px; font-family: 华文新魏,serif;'
-          ><b>医院人才智能管理系统</b></span
+          ><b>医院人事信息管理系统</b></span
           >
         </span>
 

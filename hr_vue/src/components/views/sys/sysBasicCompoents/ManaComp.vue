@@ -31,7 +31,7 @@
         </el-tree>
       </div>
 
-      <div style='width: 45%;margin-left: 10%;'>
+      <!-- <div style='width: 45%;margin-left: 10%;'>
         <el-input
           placeholder='根据部门名查询'
           style='width: 40%;margin-right: 15px;'
@@ -55,7 +55,7 @@
             </template>
           </el-table-column>
         </el-table>
-      </div>
+      </div> -->
     </div>
 
     <el-dialog title='提示' :visible.sync='manaDialogVisible' width='30%'>
