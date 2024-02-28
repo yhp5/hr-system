@@ -623,8 +623,12 @@ export default {
       }
     },
     init() {
-      this.getRequest('/emp/adv/c/' + this.pageNum + '/' + this.pageSize).then(res => {
-        this.employeeAdv = res.data.obj.list
+      // this.getRequest('/emp/adv/c/' + this.pageNum + '/' + this.pageSize).then(res => {
+      //   this.employeeAdv = res.data.obj.list
+      //   this.pageTotal = res.data.obj.total
+      // })
+      this.getRequest('/emp/adv/salaryInfo/' + this.pageNum + '/' + this.pageSize).then(res => {
+        this.empSalaryInfo = res.data.obj.list
         this.pageTotal = res.data.obj.total
       })
     },
