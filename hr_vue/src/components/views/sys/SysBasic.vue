@@ -20,11 +20,11 @@
         <el-tab-pane label='职称管理' name='jobName'>
           <JobNameComp :jobNameTableData='jobNameTableData' :initJobName='initJobName'></JobNameComp>
         </el-tab-pane>
-        <el-tab-pane label='奖惩规则' name='reward'
+        <!-- <el-tab-pane label='奖惩规则' name='reward'
         >
           <RewardComp></RewardComp
           >
-        </el-tab-pane>
+        </el-tab-pane> -->
         <el-tab-pane label='权限组' name='rights'
         >
           <RightsComp
