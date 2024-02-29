@@ -9,13 +9,13 @@
                 placeholder='请输入员工工号'
                 maxlength='8'
                 show-word-limit style='width: 250px; margin-bottom: 15px;margin-right: 15px;' />
-      <el-date-picker
+      <!-- <el-date-picker
         v-model='searchDate'
         type='datetime'
         placeholder='选择日期时间'
         align='right'
         value-format='yyyy-MM-dd HH:mm:ss'>
-      </el-date-picker>
+      </el-date-picker> -->
       <el-button type='primary' @click='searchCommit' style='margin-left: 15px'>搜索</el-button>
       <el-table :data='tableData' border style='width: 100%'>
         <el-table-column prop='employeeName' label='姓名'></el-table-column>
@@ -123,7 +123,7 @@ export default {
       this.init()
     },
     init(t) {
-      if (!this.searchDate) return this.$message.warning('时间不能为空!')
+      // if (!this.searchDate) return this.$message.warning('时间不能为空!')
       this.postRequest('/sal/table/' + this.pageNum + '/' + this.pageSize, {
         workId: this.searchInput,
         date: this.searchDate

@@ -120,8 +120,9 @@
         </el-card>
       </div>
     </el-card>
+    <!-- :before-close='handleClose' -->
     <el-drawer
-      :before-close='handleClose'
+
       :visible.sync='queryTableVisibleDialog'
       direction='ltr'
       custom-class='demo-drawer'
@@ -156,7 +157,7 @@
         </el-form>
         <div class='demo-drawer__footer' style='width: 200px;margin: 0 50%;transform: translateX(-50%);'>
           <el-button @click='cancelForm' size='small'>取 消</el-button>
-          <el-button type='primary' size='small' :loading='loading'>
+          <el-button @click='addHr' type='primary' size='small' :loading='loading'>
             {{ loading ? '提交中 ...' : '确 定' }}
           </el-button>
         </div>
@@ -170,12 +171,13 @@ export default {
   data() {
     let validatePass = (rule, value, callback) => {
       // 以字母开头，长度在6~18之间，只能包含字母、数字和下划线
-      let reg = new RegExp(/^[a-zA-Z]\w{5,17}$/)
-      if (!reg.test(value)) {
-        callback(new Error('以字母开头，长度在6~18之间，只能包含字母、数字和下划线!'))
-      } else {
-        callback()
-      }
+      // let reg = new RegExp(/^[a-zA-Z]\w{5,17}$/)
+      // if (!reg.test(value)) {
+      //   callback(new Error('以字母开头，长度在6~18之间，只能包含字母、数字和下划线!'))
+      // } else {
+      //   callback()
+      // }
+      callback()
     }
     return {
       initData: [],
@@ -198,11 +200,11 @@ export default {
         ],
         phone: [
           { required: true, message: '请输入内容', trigger: 'blur' },
-          { min: 11, max: 11, message: '长度不为11个', trigger: 'blur' }
+          // { min: 11, max: 11, message: '长度不为11个', trigger: 'blur' }
         ],
         telephone: [
           { required: true, message: '请输入内容', trigger: 'blur' },
-          { min: 11, max: 11, message: '长度不为11个', trigger: 'blur' }
+          // { min: 11, max: 11, message: '长度不为11个', trigger: 'blur' }
         ],
         address: [
           { required: true, message: '请输入内容', trigger: 'blur' }
@@ -305,26 +307,27 @@ export default {
         this.init()
       })
     },
-    handleClose(done) {
-      if (this.loading) {
-        return
-      }
-      this.$confirm('确定要提交表单吗？')
-        .then(_ => {
-          this.loading = true
-          this.timer = setTimeout(() => {
-            done()
-            // 动画关闭需要一定的时间
-            setTimeout(() => {
-              this.loading = false
-              this.addHr()
-            }, 400)
-          }, 2000)
-        })
-        .catch(_ => {
-          this.queryTableVisibleDialog = false
-        })
-    },
+    // handleClose(done) {
+    //   console.log(this.loading)
+    //   if (this.loading) {
+    //     return
+    //   }
+    //   this.$confirm('确定要提交表单吗？')
+    //     .then(_ => {
+    //       this.loading = true
+    //       this.timer = setTimeout(() => {
+    //         done()
+    //         // 动画关闭需要一定的时间
+    //         setTimeout(() => {
+    //           this.loading = false
+    //           this.addHr()
+    //         }, 400)
+    //       }, 2000)
+    //     })
+    //     .catch(_ => {
+    //       this.queryTableVisibleDialog = false
+    //     })
+    // },
     cancelForm() {
       this.loading = false
       this.queryTableVisibleDialog = false
