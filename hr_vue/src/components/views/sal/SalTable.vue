@@ -80,13 +80,13 @@
         <el-table-column prop='salary.allSalary' label='工资'></el-table-column>
         <el-table-column prop='reward' label='奖励'></el-table-column>
         <el-table-column prop='punishment' label='罚款'></el-table-column>
-        <el-table-column prop='tax' label='个人所得税'></el-table-column>
+        <!-- <el-table-column prop='tax' label='个人所得税'></el-table-column> -->
         <el-table-column prop='wagesPayable' label='应发工资'></el-table-column>
-        <el-table-column label='操作'>
+        <!-- <el-table-column label='操作'>
           <template slot-scope='scope'>
             <el-button type='danger' size='mini' @click='sendSalaryInfo(scope.row)'>发送工资单</el-button>
           </template>
-        </el-table-column>
+        </el-table-column> -->
       </el-table>
       <el-pagination
         @size-change='handleSizeChange'
