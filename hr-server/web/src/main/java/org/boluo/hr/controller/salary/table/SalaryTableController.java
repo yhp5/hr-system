@@ -37,7 +37,7 @@ public class SalaryTableController {
     @Log("查询所有工资表")
     public RespBean findPage(@PathVariable("pageNum") Integer pageNum,
                              @PathVariable("pageSize") Integer pageSize,
-                             @Valid SalaryTableSearch salaryTableSearch) {
+                             @Valid @RequestBody SalaryTableSearch salaryTableSearch) {
         PageHelper.startPage(pageNum, pageSize);
         return RespBean.ok(new PageInfo<>(salaryTableService.selectAll(salaryTableSearch)));
     }

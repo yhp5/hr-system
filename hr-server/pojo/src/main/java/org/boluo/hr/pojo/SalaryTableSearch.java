@@ -22,7 +22,6 @@ public class SalaryTableSearch {
     /**
      * 员工号
      */
-    @Length(min = 8, max = 8, message = "员工号长度必须为8")
     private String workId;
     /**
      * 工资时间
